@@ -1,7 +1,18 @@
 extends _template
  
 block variables
-    - var title= 'Index page'
+    - var title= 'Эверест-Строй'
     - var url_js= 'app.js' 
+    - var homes_js= 'homes.js' 
+    - var foundation_js= 'foundation.js' 
 
 block content
+    include ./pages/_hero
+    include ./pages/_project-home
+    include ./pages/_home-plan
+    include ./pages/_documents
+    include ./pages/_ipoteca
+    include ./pages/_command
+    include ./pages/_opinion
+    include ./pages/_contacts
+    include ./pages/_popup-main

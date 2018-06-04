@@ -1,1 +1,46 @@
+-   
+    var headerNav = [
+        {
+            title: 'Проекты домов',
+            href: '#scroll-project-home'
+        },
+        {
+            title: 'Прeимущества',
+            href: '#scroll-documents'
+        },
+        {
+            title: 'Ипотека',
+            href: '#scroll-ipoteca'
+        },
+        {
+            title: 'Отзывы',
+            href: '#scroll-opinion'
+        },
+        {
+            title: 'Контакты',
+            href: '#scroll-contacts'
+        }
+    ]
+
 header.header
+    .container
+        .header__line
+            .header__brand
+                a(href="#").logo-brand
+                    img(src="./assets/img/logo-brand.png" alt="Эверест-строй" title="Эверест-Строй")
+                span.logo-descr Готовые дома от застройщика
+                    br
+                    | в черте Ярославля
+            nav.header-nav
+                ul.header-nav__list
+                    each obj in headerNav
+                        li.header-nav__item
+                            a(href= `${obj.href}`).header-nav__link= obj.title
+                .contact-us
+                    span.contact-us__phone.phone_alloka 8 (4852) 68-48-94
+                    a(href="#popup-form").contact-us__popup.popup-with-form.txt.anim-text-flow  Заказать звонок
+            a.nav__trigger.no-animation(href="#")
+                span
+                span
+                span
+                

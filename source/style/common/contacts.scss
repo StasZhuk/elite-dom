@@ -1,0 +1,176 @@
+.contacts {
+    overflow: hidden;
+    min-height: 700px;
+    padding: 0;
+    .section__heading-wrap {
+        margin-top: 50px;
+    }
+
+    .logo-brand {
+        margin-left: 10px;
+    }
+}
+
+.contacts__line {
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    height: 160px;
+    background-color: #fff;
+}
+
+.contacts__line--top {
+    height: 120px;
+    top: 0;
+    box-shadow: 25px 30px 60px 0 #fff,
+                -25px 30px 60px 0 #fff;
+}
+
+.contacts__line--bottom {
+    bottom: 0;
+    box-shadow: 25px -30px 60px 0 #fff,
+                -25px -30px 60px 0 #fff;
+}
+
+#map {
+    position: relative;
+    height: 700px;
+}
+
+.contacts__aside-wrap {
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+
+    @include xs(display, none);
+}
+
+.contacts__aside-nav {
+    display: flex;
+    align-items: center;
+    width: 350px;
+    height: 100%;
+    padding-left: 35px;
+    background-color: #fff;
+    box-shadow: 0 0 15px 5px rgba(#000, 0.2);
+    pointer-events: all;
+
+    @include md(width, 250px);
+    @include sm(width, 170px);
+    @include sm(padding-left, 15px);
+
+    span {
+        display: block;
+    }
+}
+
+.aside-nav__line {
+    margin-bottom: 40px;
+}
+
+.contacts__title {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+
+    @include md(font-size, 1.4rem);
+}
+
+.contacts__phone,
+.contacts__addres  {
+    font-size: 2.2rem;
+    font-family: 'ClearSansBold', sans-serif;
+    color: $acsent;
+
+    @include md(font-size, 1.6rem);
+    @include sm(font-size, 1.2rem);
+}
+
+.contacts__addres {
+    line-height: 1.2;
+    span {
+        font-size: 2rem;
+        @include md(font-size, 1.6rem);
+        @include sm(font-size, 1.2rem);
+    }
+}
+
+.contacts__line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #000;
+}
+
+.contacts__brand {
+    display: flex;
+    align-items: center;
+    max-width: 330px;
+    .logo-brand {
+        margin-right: 20px;
+    }
+    .logo-descr {
+        color: #000;
+    }
+}
+
+.contacts__bricks {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.bricks {
+    display: block;
+    width: 195px;
+    height: 160px;
+    background: transparent url('../img/bricks.png') no-repeat center;
+    background-size: contain;
+    animation: scale 4s ease-in-out infinite running;
+
+    @include sm(width, 150px);
+    @include sm(height, 100px);
+
+}
+
+@keyframes scale {
+    0% {
+      transform: scale(1);  
+    }
+    50% {
+      transform: scale(0.9);  
+    }
+    100% {
+      transform: scale(1);          
+    }
+}
+
+.bricks__text {
+    position: relative;
+    display: block;
+    font-size: 1.8rem;
+    margin-right: 50px;
+    text-transform: uppercase;
+
+    @include xs(font-size, 1.4rem);
+    @include xs(margin-right, 15px);
+
+    &::after {
+        content: '';        
+        position: absolute;
+        bottom: 100%;
+        margin-bottom: 10px;
+        left: 65%;
+        display: block;
+        width: 70px;
+        height: 42px;
+        background: transparent url('../img/contacts-arrow.png') no-repeat center;
+        background-size: contain;
+
+    }
+}

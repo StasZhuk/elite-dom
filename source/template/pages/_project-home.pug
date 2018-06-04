@@ -1,0 +1,93 @@
+section.project-home#scroll-project-home
+    .container
+        .section__heading-wrap
+            h2.section__heading Проекты домов
+        .project-home__slider
+            .slick-slider-js
+                each obj in nav
+                    .slide
+                        .project-home__item(data-home= obj.dataHome)
+                            .project-home__img(style=`background-image: url(./assets/img/projects/${obj.imgSrc})`)
+                                .project-home__square 
+                                    span= obj.square + ' м'
+                                    sup 2
+                            .project-home__item-content
+                                .project-home__title= obj.title
+                                if obj.title == 'таунхаус'
+                                    .project-home__subtitle= `Цена ${obj.subtitle} млн.р.`
+                                    .project-home__ipoteca ипотека от 18 000 руб/мес.
+                                    .project-home__params
+                                        .project-home__line
+                                            span.project-home__key Размеры
+                                            span.project-home__value= `${obj.size} кв.м.`
+                                        .project-home__line
+                                            span.project-home__key Удобства
+                                            span.project-home__value= obj.convenience
+                                        .project-home__line
+                                            span.project-home__key Особенности
+                                            span.project-home__value= obj.specials
+                                    .wrap-center
+                                        a(href="#" data-home= obj.dataHome).btn.project-home__btn Подробнее
+                            
+                                else
+                                    .project-home__subtitle-descr ипотека 
+                                    .project-home__subtitle= `от ${obj.ipoteca} руб/мес.`
+                                    .project-home__ipoteca Цена:
+                                        span.project-home__coast= ` ${obj.coast} млн.р.`
+                                    .project-home__params
+                                        .project-home__line
+                                            span.project-home__key Размеры
+                                            span.project-home__value= `${obj.size} кв.м.`
+                                        .project-home__line
+                                            span.project-home__key Удобства
+                                            span.project-home__value= obj.convenience
+                                        .project-home__line
+                                            span.project-home__key Особенности
+                                            span.project-home__value= obj.specials
+                                    .wrap-center
+                                        a(href="#" data-home= obj.dataHome).btn.project-home__btn Подробнее
+            .slider__nav
+                .slider__arrow.slider__arrow-prev
+                    +icon('prev')
+                .slider__arrow.slider__arrow-next
+                    +icon('next')
+        .catalog-form__wrap
+            .section__subtitle Получиту полный каталог проектов
+            form(id="form-catalog" class="form form-catalog" method="POST")
+                .form-catalog__wrap
+                    .input__wrap
+                        input(id="name" name="name" type="text" placeholder="Введите имя" required)
+                    .input__wrap
+                        input(id="phone" name="phone" type="tel" placeholder="Введите телефон" required)
+                .form-submit__wrap
+                    .input__wrap-btn
+                        a(href="#" class="form-submit").btn.btn__hero получить каталог
+                    p.form__descr.form__descr--small Настоящим подтверждаю, что я ознакомлен с 
+                        a(href="./politic.html").politic политикой конфидециальности 
+                        | и согласен на обработку персональных данных.
+
+        .section__heading-wrap
+            h3.section__subtitle В СТОИМОСТЬ НАШИХ ДОМОВ УЖЕ ВКЛЮЧЕНЫ
+        .project-home__list-icons
+            ul.list
+              li(data-tooltip="Категория земли – ИЖС. У вас будет сельская прописка, тарифы и налоги. А пользоваться будете всеми городскими удобствами – сады, школы, магазины и аптеки в шаговой доступности").list__item.tooltip
+                +icon('land')
+                .list__item-descr Участок земли
+              li(data-tooltip="Мы устанавливаем септики ТОПАС-5, которые не требуют очистки. Все удобства, как в квартире!").list__item.tooltip
+                +icon('septic')
+                .list__item-descr Септик
+              li(data-tooltip="Всегда чистая вода из скважины 40-50 метров и никаких отключений!").list__item.tooltip
+                +icon('well')
+                .list__item-descr Скважина 
+              li(data-tooltip="Вам не придется их менять, как это обычно бывает в новостройках. Мы сразу устанавливаем качественные окна Montblanc с 5-камерным профилем").list__item.tooltip
+                +icon('window')
+                .list__item-descr Окна 
+              li(data-tooltip="Приобретая дом, даже в черновой отделке, Вы увидите уже теплую и тиху кровлю за счет 20-ти сантиметрового утеплителя.").list__item.tooltip
+                +icon('insulation')
+                .list__item-descr Утепленная кровля
+
+    include ./_popup-home
+     
+
+
+        

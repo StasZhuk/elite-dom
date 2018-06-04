@@ -1,0 +1,55 @@
+#popup-form,
+#popup-form-opinion,
+#popup-form-smeta,
+#popup-form-ipoteca {
+    position: relative;
+    background-color: #fff;
+    max-width: 515px;
+    width: 100%;
+    margin: auto;
+    border-radius: 10px;
+    padding: 40px 0px 30px;
+    text-align: center;
+
+    .section__subtitle {
+        margin-bottom: 10px;
+    }
+
+    .form__wrap {
+        padding: 0 100px;
+        margin-bottom: 30px;
+        @include sm(padding, 0 40px)        
+        @include xs(padding, 0 10px)        
+    }
+
+    .input__wrap {
+        margin-bottom: 10px;
+    }
+    .input__wrap-btn {
+        margin-bottom: 0px;
+    }
+
+    input,
+    textarea {
+        width: 100%;        
+        padding: 10px;
+        border: 1px solid rgba(#767676, 0.5);
+    }
+
+    .form-submit {
+        width: 100%;
+    }
+}
+
+.form__descr {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    padding: 0 40px;
+    color: #767676;
+
+    @include sm(padding, 0 10px)
+}
+
+.form__descr.form__descr--small {
+    margin-bottom: 0;
+}

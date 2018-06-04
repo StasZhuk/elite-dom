@@ -1,9 +1,15 @@
 @include font-face("fontAwesome", "../fonts/fontAwesome/fontawesome-webfont")
-@include font-face("robotobold", "../fonts/Roboto/roboto-bold-webfont")
-@include font-face("robotobold_italic", "../fonts/Roboto/roboto-bolditalic-webfont")
-@include font-face("robotoitalic", "../fonts/Roboto/roboto-italic-webfont")
-@include font-face("robotolight", "../fonts/Roboto/roboto-light-webfont")
-@include font-face("robotolight_italic", "../fonts/Roboto/roboto-lightitalic-webfont")
-@include font-face("robotomedium", "../fonts/Roboto/roboto-medium-webfont")
-@include font-face("robotomedium", "../fonts/Roboto/roboto-mediumitalic-webfont")
-@include font-face("robotoregular", "../fonts/Roboto/roboto-regular-webfont")
+@include font-face("ClearSansRegular", "../fonts/ClearSans/ClearSansRegular")
+@include font-face("ClearSansItalic", "../fonts/ClearSans/ClearSansItalic")
+@include font-face("ClearSansBoldItalic", "../fonts/ClearSans/ClearSansBoldItalic")
+@include font-face("ClearSansBold", "../fonts/ClearSans/ClearSansBold")
+@include font-face("MyriadProBold", "../fonts/MyriadPro/MyriadProBold")
+@include font-face("MyriadProRegular", "../fonts/MyriadPro/MyriadProRegular")
+
+@font-face {
+    font-family: lg;
+    src: url('../fonts/lightgallery/lg.eot?n1z373');
+    src: url('../fonts/lightgallery/lg.eot?#iefixn1z373') format("embedded-opentype"), url('../fonts/lightgallery/lg.woff?n1z373') format("woff"), url('../lightgallery/fonts/lg.ttf?n1z373') format("truetype"), url('../fonts/lightgallery/lg.svg?n1z373#lg') format("svg");
+    font-weight: 400;
+    font-style: normal
+}

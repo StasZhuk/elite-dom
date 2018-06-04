@@ -1,0 +1,66 @@
+section.opinion#scroll-opinion
+    .container
+        .section__heading-wrap
+            h2.section__heading Отзывы
+        .opinion__slider
+            .slider-nav
+                .slider-nav__prev
+                    +icon('prev')
+                .slider-nav__next
+                    +icon('next')
+            .lightslider-js
+                ul(id="opinionGalery")
+                    li(data-thumb="" data-src="./assets/img/opinions/opinion-1.jpg")
+                        img(src="./assets/img/opinions/opinion-1.jpg")
+                    li(data-thumb="" data-src="./assets/img/opinions/opinion-1.jpg")
+                        img(src="./assets/img/opinions/opinion-1.jpg")
+                    li(data-thumb="" data-src="./assets/img/opinions/opinion-1-big.jpg")
+                        img(src="./assets/img/opinions/opinion-1-small.jpg")
+                    li(data-thumb="" data-src="./assets/img/opinions/opinion-1.jpg")
+                        img(src="./assets/img/opinions/opinion-1.jpg")
+                    li(data-thumb="" data-src="./assets/img/opinions/opinion-1.jpg")
+                        img(src="./assets/img/opinions/opinion-1.jpg")
+                    li(data-thumb="" data-src="./assets/img/opinions/opinion-1.jpg")
+                        img(src="./assets/img/opinions/opinion-1.jpg")
+                    li(data-thumb="" data-src="./assets/img/opinions/opinion-1.jpg")
+                        img(src="./assets/img/opinions/opinion-1.jpg")
+
+        .opinion__slider-video
+            .slider-nav
+                .slider-nav__prev
+                    +icon('prev')
+                .slider-nav__next
+                    +icon('next')
+
+            .lightslider-js
+                ul(id="opinionVideo")
+                    li
+                        .opinion-video__wrap.opinion-video__wrap-1
+                            .opinion-video__preview.active
+                            iframe(class="opinion-video" width="260" height="215" data-src="https://www.youtube.com/embed/ungG3s6gNXU?autoplay=1&enablejsapi=1&version=3&playerapiid=ytplayer" src="" frameborder="0" gesture="media" allow="encrypted-media"  allowfullscreen allowscriptaccess="always")
+                    li
+                        .opinion-video__wrap.opinion-video__wrap-2
+                            .opinion-video__preview.active
+                            iframe(class="opinion-video" width="260" height="215" data-src="https://www.youtube.com/embed/uUzYizUrcKI?autoplay=1&enablejsapi=1&version=3&playerapiid=ytplayer" src="" frameborder="0" gesture="media" allow="encrypted-media"  allowfullscreen allowscriptaccess="always")
+                    li
+                        .opinion-video__wrap.opinion-video__wrap-3
+                            .opinion-video__preview.active
+                            iframe(class="opinion-video" width="260" height="215" data-src="https://www.youtube.com/embed/rRWI8QdILQo?autoplay=1&enablejsapi=1&version=3&playerapiid=ytplayer" src="" frameborder="0" gesture="media" allow="encrypted-media"  allowfullscreen allowscriptaccess="always")
+                    li
+                        .opinion-video__wrap.opinion-video__wrap-4
+                            .opinion-video__preview.active
+                            iframe(class="opinion-video" width="260" height="215" data-src="https://www.youtube.com/embed/PFSzs_deP-M?autoplay=1&enablejsapi=1&version=3&playerapiid=ytplayer" src="" frameborder="0" gesture="media" allow="encrypted-media"  allowfullscreen allowscriptaccess="always")
+                    li
+                        .opinion-video__wrap.opinion-video__wrap-5
+                            .opinion-video__preview.active
+                            iframe(class="opinion-video" width="260" height="215" data-src="https://www.youtube.com/embed/OrJXQZ_3BOI?autoplay=1&enablejsapi=1&version=3&playerapiid=ytplayer" src="" frameborder="0" gesture="media" allow="encrypted-media"  allowfullscreen allowscriptaccess="always")
+                    li
+                        .opinion-video__wrap.opinion-video__wrap-6
+                            .opinion-video__preview.active
+                            iframe(class="opinion-video" width="260" height="215" data-src="https://www.youtube.com/embed/7v4Hq0a-XrI?autoplay=1&enablejsapi=1&version=3&playerapiid=ytplayer" src="" frameborder="0" gesture="media" allow="encrypted-media"  allowfullscreen allowscriptaccess="always")
+                    li
+                        .opinion-video__wrap.opinion-video__wrap-7
+                            .opinion-video__preview.active
+                            iframe(class="opinion-video" width="260" height="215" data-src="https://www.youtube.com/embed/fM7Y8TmEGHY?autoplay=1&enablejsapi=1&version=3&playerapiid=ytplayer" src="" frameborder="0" gesture="media" allow="encrypted-media"  allowfullscreen allowscriptaccess="always")                    
+        .wrap-center
+            a(data-href="#mypres" href="#popup-form-opinion").btn.btn__hero.popup-with-form оставить отзыв
