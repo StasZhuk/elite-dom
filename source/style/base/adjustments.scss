@@ -1,7 +1,7 @@
-body,
 html {
     height: 100%;
     width: 100%;
+    overflow-x: hidden;
 }
 
 html {
@@ -12,18 +12,14 @@ html {
 }
 
 body {
+    width: 100%;
+    overflow: hidden;
     font-size: 1.6rem;
     font-family: $main-font;
     background-color: $white;
-    @include desktop() {
-        font-size: 1.5rem;
-    }
-    @include laptop() {
-        font-size: 1.4rem;
-    }
-    @include phone() {
-        font-size: 1.3rem;
-    }
+    @include md(font-size, 1.5rem);
+    @include sm(font-size, 1.4rem);
+    @include xs(font-size, 1.3rem);
 }
 
 *,
@@ -55,6 +51,7 @@ a {
     text-decoration: none;
 }
 
+a,
 input,
 select,
 button {
@@ -76,16 +73,14 @@ svg {
 
 section {
     position: relative;
-}
-
-.section {
     padding: 50px 0;
 }
 
 .container {
     @include wrapper();
     position: relative;
-    max-width: 1200px;
+    max-width: 1240px;
+    height: 100%;
     width: 100%;
     margin: 0 auto;
 }
@@ -94,91 +89,110 @@ section {
     @include row-flex();
 }
 
-a {
-    color: $white;
-    cursor: pointer;
-}
-
-.text-acsent {
-    color: $acsent;
-}
-.text--bold {
-    font-weight: bold;
-}
-
-.btn__wrap {
-    text-align: center;
+.logo-brand {
+    display: block;
+    width: 80px;
+    height: 50px;
+    img {
+        max-width: 65px;
+        max-height: 50px;
+    }
 }
 
 .btn {
-    font-family: 'robotoregular', sans-serif;
+    position: relative;
+    overflow: hidden;
+    font-family: 'ClearSansRegular', sans-serif;
     display: inline-block;
-    padding: 2rem 3rem;
-    background-color: $acsent;
-    border-radius: 3px;
-    font-size: 1.4rem;
+    padding: 1.5rem 3rem;
+    border-radius: 25px;
+    font-size: 1.2rem;
     text-align: center;
     text-transform: uppercase;
-    font-weight: bold;
-    color: $black;
-    border: 2px solid $acsent;
-    min-width: 180px;
-    transition: 0.5s background-color, 0.5s color;
-    @include sm(font-size, 1.2rem);    
-    @include sm(padding, 1.5rem);    
-}
-
-.btn-wrap {
-    @include xs(text-align, center);
-}
-
-.btn-border {
-    background-color: transparent;
-    border: 2px solid $acsent;
     color: $white;
+    border: 1px solid transparent;
+    transition: 0.5s background-color, 0.5s color, border-color 0.5s;
+    cursor: pointer;
+    @include sm(padding, 1rem 2rem);
+    @include xs(font-size, 1.4rem);    
+}
 
-    &:hover {
-        background-color: $acsent;
-        color: $black;
+form .input__wrap-check {
+    display: flex;
+    input {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
     }
+    a {
+        color: $acsent;
+        text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.lg-backdrop.in {
+    opacity: 0.5;
+}
+
+.wrap-center {
+    text-align: center;
+}
+
+.section__heading-wrap {
+    text-align: center;
 }
 
 .section__heading {
-    font-size: $ts-h2;
-    color: $acsent;
-    text-align: center;
+    font-family: 'ClearSansBold', sans-serif;
+    font-size: 4.6rem;
     text-transform: uppercase;
-    margin-bottom: 50px;
 
-    @include xs (font-size, 24px)
-}
-
-.section__heading-descr {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 10px;
-
-    &:after,
-    &:before {
-        content: '';
-        display: inline-block;
-        height: 2px;
-        background-color: $black;
-        width: 50px;
-        border-radius: 10px;
+    &.section__text--red {
+        color: $acsent;
     }
 
-    &:after {
-        margin-left: 10px;
-    }
-    &:before {
-        margin-right: 10px;
-    }
+    @include md(font-size, 3.6rem);
+    @include sm(font-size, 2.4rem);
 }
 
-.text--black {
-    color: $black;
-    margin-right: 10px;
+.section__subtitle {
+    font-family: 'ClearSansBold', sans-serif;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    color: $text-grey;
+
+    &.section__text--red {
+        color: $acsent;
+    }
+
+    @include sm(font-size, 2rem);
+    @include xs(font-size, 1.8rem);    
 }
+
+.ink {
+    display: block;
+    position: absolute;
+    background: rgba(255,255,255,0.7);
+    border-radius: 100%;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+  }
+  .animate {
+    -webkit-animation: ripple 0.65s linear;
+    -moz-animation: ripple 0.65s linear;
+    -ms-animation: ripple 0.65s linear;
+    -o-animation: ripple 0.65s linear;
+    animation: ripple 0.65s linear;
+  }
+
+  @keyframes ripple {
+    100% {
+      opacity: 0;
+      transform: scale(2.5);
+    }
+  }

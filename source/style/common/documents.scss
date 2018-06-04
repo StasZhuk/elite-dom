@@ -1,0 +1,186 @@
+.documents {
+    overflow: hidden;
+    .section__heading {
+        margin-bottom: 10px;
+    }
+}
+
+.section__sub-heading {
+    font-family: 'ClearSansItalic', sans-serif;
+    font-size: 1.6rem;
+    color: $acsent-grey;
+}
+
+.documents__content {
+    display: flex;
+
+    @include md(flex-direction, column);
+}
+
+.documents__left {
+    width: 48%;
+    padding-top: 45px;
+    padding-left: 65px;
+
+    @include md(padding-left, 0);
+    @include md(margin, 0 auto);
+    @include md(max-width, 600px);
+    @include md(width, 100%);
+}
+
+.documents__heading {
+    display: inline-block;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+
+    @include md(display, block);
+    @include md(text-align, center);    
+
+    span {
+        position: relative;
+    }
+}
+
+.bg-shape {
+    position: relative;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $acsent;
+        transform: skewX(-20deg);
+
+    }
+}
+
+.documents__check {
+    padding-left: 30px;
+
+    @include sm(padding-left, 0)
+}
+
+.documents__check-line {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: flex-start;
+    .icon {
+        min-width: 15px;
+        width: 15px;
+        height: 15px;
+        fill: $acsent;
+        margin-right: 10px;
+    }
+
+    span {
+        font-size: 1.6rem;
+    }
+}
+
+.documents__right {
+    position: relative;
+    width: 365px;
+    margin: 0 auto;
+    padding: 0 30px;
+    padding-top: 140px;
+    height: 480px;
+
+    @include sm(width, 100%);
+    @include sm(max-width, 300px);
+    @include sm(padding-left, 15px);
+    @include sm(padding-right, 15px);
+
+    &:before {
+        content: '';
+        position: absolute;
+        display: block;
+        top: -15px;
+        left: -12px;
+        right: -60px;
+        bottom: -80px;
+        background: url('../img/documents-form.png') no-repeat center;
+        background-size: contain;
+
+        @include sm(left, -40px);
+        @include sm(right, -120px);
+    }
+}
+
+.documents__right__content {
+    position: relative;
+}
+
+.documents__right-title {
+    font-family: 'ClearSansBold', sans-serif;
+    font-size: 2.4rem;
+    text-align: center;
+    color: #383838;
+    text-transform: uppercase;
+
+
+    span {
+        display: block;
+        color: $acsent;
+        font-size: 3rem;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        text-transform: none;
+    }
+}
+
+.documents__right-subtitle  {
+    width: 200px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.documents__form {
+    .input__wrap {
+        margin-bottom: 15px;
+    }
+
+    input {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .wrap-center {
+        margin-bottom: 15px;
+
+        @include sm(margin-bottom, 15px)
+    }
+
+    .form__descr.form__descr--small {
+        text-align: center;
+        padding: 0;
+        margin-bottom: 15px;
+
+        a {
+            color: $acsent;
+        }
+    }
+}
+
+.documents__to-know {
+    display: flex;
+    align-items: center;
+    color: #383838;
+    justify-content: center;    
+}
+
+.documents__to-know-number {
+    font-family: 'ClearSansBold', sans-serif;
+    font-size: 3.2rem;
+    margin-right: 5px;
+    margin-top: 4px;
+}
+
+.documents__to-know-descr {
+    max-width: 240px;
+}

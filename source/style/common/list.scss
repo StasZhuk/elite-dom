@@ -1,0 +1,36 @@
+.list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.list__item {
+    padding-right: 20px;
+    flex-basis: 200px;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+
+    &:hover {
+        .icon {
+            transform: rotateY(180deg);
+        }
+
+        .list__item-descr  {
+            text-decoration: underline;
+        }
+    }
+    .icon {
+        width: 30px;
+        height: 30px;
+        fill: #fff;
+        transition: 0.4s transform;
+    }
+}
+
+.list__item-descr {
+    text-transform: uppercase;
+    margin-left: 15px;    
+    font-size: 14px;
+    line-height: 1.4;
+}

@@ -1,0 +1,46 @@
+<!-- popup homes start -->
+.popup-home__wrap
+    .popup-home
+        a(href="javascript:void;").popup-close
+        .popup-home__left
+            .popup-home__title-line
+                .popup-home__title Таунхаус
+                .popup-home__square
+                    span 74 м
+                    sup 2
+            .slider-galery
+                ul#imageGallery
+                    //- fill from homes.js 
+        .popup-home__right
+            .popup-home__title-line
+                span.popup-home__coast Цена:
+                span.popup-home__coat-val 1,99 млн.р.
+            .popup-home__ipoteca Ипотека от 18 000 руб/мес.
+            p.popup-home__descr Дом выполнен из газобетонных блоков ЭКО и оштукатурен. В завершенном виде будет выглядеть, как на фото. Каждая половина дома имеет площадь по 74 кв.м.
+            .popup-home__list-heading В стоимость дома уже включены:
+            ul.popup-home__list
+                li.popup-home__list-item
+                    span.popup-home__item-dot
+                    span.popup-home__item-text 4 сотки земли в черте города.
+                li.popup-home__list-item
+                    span.popup-home__item-dot
+                    span.popup-home__item-text электричество - 15 кВт.
+                li.popup-home__list-item
+                    span.popup-home__item-dot
+                    span.popup-home__item-text водопровод - скважина 50 метров.
+                li.popup-home__list-item
+                    span.popup-home__item-dot
+                    span.popup-home__item-text канализация - Топас-5.
+            p.popup-home__descr Дом построен в соответствии с СП 30-102-99 «Планировка и застройка территорий малоэтажного жилищного строительства».
+            form.popup-home__form.form(method="POST" data-tag="заявка дом")
+                .input__wrap
+                    input(type="text", name="name" placeholder="Введите имя")
+                .input__wrap
+                    input(type="tel", name="phone" placeholder="Введите телефон")
+                p.form__descr.form__descr--small Настоящим подтверждаю, что я ознакомлен с 
+                    a(href="./politic.html").politic политикой конфидециальности 
+                    | и согласен на обработку персональных данных.
+                .wrap-center
+                    a(href="#").btn.btn__popup.form-submit Посмотреть 3D-тур
+<!-- popup homes end -->
+

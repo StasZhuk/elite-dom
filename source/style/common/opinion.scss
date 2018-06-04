@@ -1,0 +1,51 @@
+.opinion {
+    .section__heading-wrap {
+        margin-bottom: 50px;
+    }
+
+
+}
+
+
+.opinion__slider,
+.opinion__slider-video {
+    position: relative;
+    margin: 0 50px;
+    margin-bottom: 50px;
+    li {
+        text-align: center;
+    }
+
+    @include xs(margin-right, 30px);
+    @include xs(margin-left, 30px);
+}
+
+.opinion__slider {
+    .slider-nav__prev {
+        @include xs(margin-left, -35px);
+    }
+    .slider-nav__next {
+        @include xs(margin-right, -35px);   
+    }
+}
+
+.opinion__slider-video {
+    max-width: 850px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+
+    @include xs(margin-left, 0px);
+
+    .lSAction {
+        visibility: hidden;
+    }
+
+    
+    .slider-nav__prev {
+        @include md(margin-left, -10px);
+    }
+    .slider-nav__next {
+        @include md(margin-right, -10px);   
+    }
+}

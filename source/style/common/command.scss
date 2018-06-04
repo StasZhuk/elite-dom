@@ -1,0 +1,11 @@
+.command {
+    min-height: 700px;
+    background: #fff url('../img//command-bg.jpg') no-repeat center;
+    background-size: cover;
+    .section__heading-wrap {
+        max-width: 820px;
+        margin: 0 auto;
+    }
+
+    @include md(min-height, 500px);
+}

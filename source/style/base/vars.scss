@@ -1,5 +1,5 @@
 // fonts
-$main-font: "robotoregular", sans-serif;
+$main-font: "ClearSansRegular", sans-serif;
 
 // text-size
 $ts-main: 1.6rem;
@@ -9,8 +9,8 @@ $ts-h3: 2.8rem;
 
 
 // colors
-$acsent: #FF9900;
-$acsent-dark: #404040;
+$acsent: #c6242a;
+$acsent-grey: #828282;
 $white: #fff;
 $black: #000;
 
@@ -18,4 +18,5 @@ $black: #000;
 $header-bg: #1f1f1f; 
 
 // text-color
-$text-color_main: #474b57;
+$text-color_main: $black;
+$text-grey: #716f6f;

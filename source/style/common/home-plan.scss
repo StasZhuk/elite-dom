@@ -1,0 +1,142 @@
+.plan-home {
+    padding: 0;
+    position: relative;
+
+    @include sm(display, none);
+}
+
+.plane-home__nav {
+    position: absolute;
+    top: 18%;
+    left: 2%;
+    max-width: 250px;
+    width: 100%;
+    padding: 25px;
+    background-color: rgba(#fff, 0.8);
+    border-radius: 15px;
+}
+
+.plane-home__item {
+    margin-bottom: 15px;
+
+    &:hover {
+        .plane-home__link  {
+            color: $acsent;
+            text-decoration: underline;
+        }
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.plane-home__link {
+    display: block;
+    text-transform: uppercase;
+    transition: 0.4s color;
+
+    &.active {
+        color: $acsent;
+        text-decoration: underline;
+    }
+}
+
+.plane-home__btn {
+    margin-top: 35px;
+
+    a {
+        font-family: 'ClearSansBold', sans-serif;
+        font-size: 1.4rem;
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+.plan-home__img {
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.plan-home__mark {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid $acsent;
+    background-color: #fff;
+
+    &:after,
+    &:before {
+        content: '';
+        position: absolute;
+        z-index: 2;
+        width: 10px;
+        height: 2px;
+        background-color: $acsent;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    &:before {
+        transform: translate(-50%,-50%) rotate(90deg);        
+    }
+
+    .tooltip {
+        display: block;
+        z-index: 100;
+        height: 100%;
+        left: 0;
+        &:after {
+            left: -10px;
+            margin-bottom: 10px;
+        }
+        &:before {
+            left: 5px;
+            margin-bottom: 0;
+        }
+        &.active:after,
+        &.active:before {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+.plan-home__mark-electricity {
+    top: 41%;
+    left: 30%;
+}
+.plan-home__mark-roof {
+    top: 30%;
+    left: 49%;
+}
+.plan-home__mark-water {
+    top: 79%;
+    left: 27.8%;
+}
+.plan-home__mark-wall {
+    top: 52%;
+    left: 56%;
+}
+.plan-home__mark-wall-2 {
+    top: 80%;
+    left: 76%;
+}
+.plan-home__mark-gas {
+    top: 29%;
+    left: 58%;
+}
+.plan-home__mark-window {
+    top: 40%;
+    left: 73%;
+}
+.plan-home__mark-foundation {
+    top: 67%;
+    left: 60%;
+}
+.plan-home__mark-ceiling {
+    top: 48%;
+    left: 67%;
+}

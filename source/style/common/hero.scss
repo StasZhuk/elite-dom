@@ -1,0 +1,97 @@
+.hero {
+    min-height: 700px;
+    height: 100vh;
+    background: #fff url('../img/hero-bg.jpg') no-repeat center;
+    background-size: cover;
+    padding-top: 18%;
+    padding-bottom: 60px;
+    color: $white;
+    @include md(min-height,
+    unset);
+    @include md(padding,
+    0);
+    .container {
+        @include md(display, flex);
+        @include md(align-items, center);
+    }
+}
+
+.hero__center {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.hero__title {
+    font-family: "ClearSansBold", sans-serif;
+    font-size: 4.6rem;
+    margin-bottom: 20px;
+    @include md(font-size,
+    3.6rem);
+    @include sm(font-size,
+    2.4rem);
+}
+
+.hero__subtitle {
+    position: relative;
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    font-size: 2.4rem;
+    &:after {
+        content: '';
+        position: absolute;
+        right: 15px;
+        top: 100%;
+        margin-top: 10px;
+        display: block;
+        width: 65px;
+        height: 55px;
+        background: transparent url('../img/hero-arrow.png') no-repeat center;
+        background-size: contain;
+
+        @include xs(display, none);
+        
+    }
+    @include md(font-size,
+    2rem);
+    @include sm(font-size,
+    1.8rem);
+}
+
+.btn__hero {
+    border-radius: 0;
+    background-color: $acsent;
+    font-size: 1.6rem;
+    box-shadow: 0px 0px 20px 0px #d12115;
+    transition: box-shadow 0.4s, transform 0.4s, background-color 0.4s;
+    &:hover {
+        background-color: darken($acsent, 10%);
+        box-shadow: none;
+    }
+}
+
+.hero__bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    .list__item {
+        @include md(flex-basis, 0);
+    }
+    .list__item-descr {
+        @include md(display,none);
+    }
+    .tooltip:before {
+        @include md(left, 10px);        
+    }
+    .tooltip:after {
+        @include md(left, 0px);        
+    }
+
+    @include xs(display, none);
+    
+}

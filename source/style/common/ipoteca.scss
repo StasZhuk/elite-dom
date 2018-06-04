@@ -1,0 +1,56 @@
+.ipoteca {
+    background: #fff url('../img/ipoteca/girl.png') no-repeat bottom right;
+    background-size: 660px 474px;
+    @include md(background-size, 480px);
+    @include sm(background-size, 300px);
+
+    .section__heading-wrap {
+        margin-bottom: 70px;
+    }
+
+    .section__subtitle {
+        margin-bottom: 10px;
+    }
+
+    p {
+        margin-bottom: 20px;
+        line-height: 1.2;
+    }
+
+    .btn {
+        margin-bottom: 190px;
+    }
+}
+
+p.ipoteca__descr {
+    margin-bottom: 30px;
+}
+
+.ipoteca__bank-partners {
+}
+
+.bank-partners {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bank-partners__item {
+    width: 208px;
+    height: 52px;
+    background: transparent no-repeat center;
+    background-size: contain;
+    margin-right: 40px;
+    margin-bottom: 30px;   
+    
+    @include md(width, 150px);
+
+    &:first-child {
+        background-image: url('../img/ipoteca/sber-bank.png');
+    }
+    &:nth-child(2) {
+        background-image: url('../img/ipoteca/vtb-bank.png');
+    }
+    &:last-child {
+        background-image: url('../img/ipoteca/ros-bank.png');
+    }
+}
